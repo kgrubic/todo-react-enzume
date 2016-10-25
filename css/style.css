@@ -1,0 +1,66 @@
+
+#mainPanel{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	width: 50%;
+	border-color: #E0E0E0;
+	border-style: groove;
+	border-radius: 10px;
+}
+#tasks{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width:70%;
+}
+#enter{
+	position: relative;
+	padding-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width:70%;
+}
+input#task{
+	width: 80%;
+	font-size: 20px;
+}
+li{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+lable{
+	color: #007F00;
+	font-size: 20px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+#buttons{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 10px;
+}
+button{
+	border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+#button-done{
+	background-color: #4CAF50; /* Green */
+
+}
+#button-all{
+	background-color: #008CBA;
+}
+#button-notdone{
+	background-color: #f44336;
+}
+body{
+	font-family: helvetica;
+}
