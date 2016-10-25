@@ -44,9 +44,43 @@ describe('<ToDo />', () => {
     wrapper.setState({ filterToDo: [] });
     expect(wrapper.props().add).to.be.defined;
     expect(wrapper.props().markAsDone).to.be.defined;
-    wrapper.instance().add('Clean Home');
-    console.log(wrapper.state().listToDo);
-    let task = new Task('Clean Home',false);
-    expect(wrapper.state().listToDo).to.eql([task]);
+
+    it('checking add', function () { 
+    //testion add function of todo component
+      wrapper.instance().add('Clean Home');
+      console.log(wrapper.state().listToDo);
+      let one = new Task('Clean Home',false);
+
+      expect(wrapper.state().listToDo).to.eql([one]);
+      expect(wrapper.state().filterToDo).to.eql([one]);
+    })
+
+    //testing markAsDone() function of todo component
+    it('checking markAsDone', function () { 
+      wrapper.instance().markAsDone('Clean Home');
+      //console.log(wrapper.state().listToDo[0].getDone());
+      expect(wrapper.state().listToDo[0].getDone()).to.eql(true);
+      expect(wrapper.state().filterToDo[0].getDone()).to.eql(true);
+    })
+
+    it('checking done', function () { 
+      //testing done() function of todo component
+      console.log(wrapper.state().filterToDo);
+      wrapper.instance().done([one]);
+      one.setDone(true);
+      expect(wrapper.state().filterToDo).to.eql([one]);
+      expect(wrapper.state().listToDo).to.eql([one]);
+    });
+    it('checking notDone', function () { 
+      let two = new Task('Sleap',false);
+      wrapper.instance().notDone([two]);
+      expect(wrapper.state().filterToDo.length).to.eql(1);
+      expect(wrapper.state().listToDo).length.to.eql(2);
+    });
+
+    it('checking all', function () { 
+      expect(wrapper.state().listToDo).length.to.eql(2);
+    });
+
   });
 });

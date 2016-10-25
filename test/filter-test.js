@@ -1,16 +1,16 @@
+ "use strict";
+
 import React from 'react';
 import { expect } from 'chai';
 import { shallow, mount, render } from 'enzyme';
 
 import Filters from '../lib/filters';
 
-
-
 describe("<FilterDone/>", () => {
-  it("contains id=button-done", function() {
+  it("contains id=a-done", function() {
     const wrapper = shallow(<Filters.FilterDone/>);
     //console.log(wrapper);
-    expect(wrapper.find('a').length).to.equal(1);
+    expect(wrapper.find('a#a-done').length).to.equal(1);
   });
 
 it('should have props for done and listD', function () {
@@ -21,10 +21,10 @@ it('should have props for done and listD', function () {
 });
 
 describe("<FilterAll/>", function() {
-  it("contains id=button-all", function() {
+  it("contains id=a-all", function() {
     const wrapper = shallow(<Filters.FilterAll/>);
     //console.log(wrapper);
-    expect(wrapper.find('a').length).to.equal(1);
+    expect(wrapper.find('a#a-all').length).to.equal(1);
   });
 
 it('should have props for done and listD', function () {
