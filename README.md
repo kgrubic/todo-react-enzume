@@ -1,9 +1,10 @@
 # todo-react-enzume
 
+# to install all packages run of you root dir  
 npm i
 
-# run:
+# to build and run app :
 npm run dev:hot
 
-# test:
+# to test:
 npm test
