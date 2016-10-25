@@ -2,8 +2,8 @@
 
 npm i
 
-run:
+# run:
 npm run dev:hot
 
-test:
+# test:
 npm test
